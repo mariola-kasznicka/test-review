@@ -1,7 +1,7 @@
 import React from "react"
 import logo from "../../logo.svg"
 import "./App.css"
-import MainApp from "../MainApp"
+import MainApp from "../MainApp/MainApp"
 import { useSelector } from "react-redux"
 
 function App() {

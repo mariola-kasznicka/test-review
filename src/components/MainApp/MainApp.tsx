@@ -1,7 +1,7 @@
 import React from "react"
 import { Form } from "react-bootstrap"
-import { InputNewTodo } from "../InputNewTodo"
-import UserSelect from "../UserSelect"
+import { InputNewTodo } from "../InputNewTodo/InputNewTodo"
+import UserSelect from "../UserSelect/UserSelect"
 import { connect } from "react-redux"
 import styles from "./MainApp.module.css"
 

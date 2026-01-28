@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import styles from "./UserSelect.module.scss"
 
 type UserSelectProps = {
-  idx: number,
+  idx: number
   user?: number
 }
 

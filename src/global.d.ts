@@ -1,7 +1,7 @@
 declare global {
-    interface Window {
-        allTodosIsDone: boolean;
-    }
+  interface Window {
+    allTodosIsDone: boolean
+  }
 }
 
 export {}

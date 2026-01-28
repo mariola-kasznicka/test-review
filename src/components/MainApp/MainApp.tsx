@@ -3,7 +3,7 @@ import { Form } from "react-bootstrap"
 import { InputNewTodo } from "../InputNewTodo/InputNewTodo"
 import UserSelect from "../UserSelect/UserSelect"
 import { connect } from "react-redux"
-import styles from "./MainApp.module.css"
+import styles from "./MainApp.module.scss"
 
 type Todo = {
   title: string
@@ -16,6 +16,7 @@ type MainAppProps = {
   addTodo: (t: Todo) => void
   changeTodo: (todos: Todo[]) => void
 }
+
 type MainAppState = {
   todoTitle: string
 }

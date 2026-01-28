@@ -1,11 +1,12 @@
 import React from "react"
-import styles from "./InputNewTodo.module.css"
+import styles from "./InputNewTodo.module.scss"
 
 type InputNewTodoProps = {
   todoTitle: string
   onChange: (todoTitle: string) => void
   onSubmit: (todo: any) => void
 }
+
 type InputNewTodoState = {
   value: string
 }

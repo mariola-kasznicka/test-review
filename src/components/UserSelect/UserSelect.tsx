@@ -1,6 +1,6 @@
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
-import styles from "./UserSelect.module.css"
+import styles from "./UserSelect.module.scss"
 
 type UserSelectProps = {
   user?: number

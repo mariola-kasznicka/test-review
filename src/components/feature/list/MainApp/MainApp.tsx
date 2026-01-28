@@ -6,15 +6,15 @@ import { connect } from "react-redux"
 import styles from "./MainApp.module.scss"
 
 type Todo = {
-  title: string;
-  user?: number;
-  isDone: boolean;
+  title: string,
+  isDone: boolean,
+  user?: number
 }
 
 type MainAppProps = {
-  todos: Todo[];
-  addTodo: (t: Todo) => void;
-  changeTodo: (todos: Todo[]) => void;
+  todos: Todo[],
+  addTodo: (t: Todo) => void,
+  changeTodo: (todos: Todo[]) => void
 }
 
 type MainAppState = {

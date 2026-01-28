@@ -34,7 +34,7 @@
   },
   "eslintConfig": {
     "rules": {
-      "indent": "off"
+      "semi": "off"
     }
   },
   "browserslist": {

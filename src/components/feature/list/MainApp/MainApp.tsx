@@ -1,20 +1,20 @@
 import React from "react"
 import { Form } from "react-bootstrap"
 import { InputNewTodo } from "../InputNewTodo/InputNewTodo"
-import UserSelect from "../UserSelect/UserSelect"
+import { UserSelect } from "../UserSelect/UserSelect"
 import { connect } from "react-redux"
 import styles from "./MainApp.module.scss"
 
 type Todo = {
-  title: string
-  user?: number
-  isDone: boolean
+  title: string;
+  user?: number;
+  isDone: boolean;
 }
 
 type MainAppProps = {
-  todos: Todo[]
-  addTodo: (t: Todo) => void
-  changeTodo: (todos: Todo[]) => void
+  todos: Todo[];
+  addTodo: (t: Todo) => void;
+  changeTodo: (todos: Todo[]) => void;
 }
 
 type MainAppState = {

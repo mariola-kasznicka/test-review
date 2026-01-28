@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from "react-redux"
 import styles from "./UserSelect.module.scss"
 
 type UserSelectProps = {
-  user?: number
-  idx: number
+  user?: number;
+  idx: number;
 }
 
-function UserSelect(props: UserSelectProps) {
+export function UserSelect(props: UserSelectProps) {
   const dispatch = useDispatch()
   const todos = useSelector(
     (state: { list: { todos: any[] } }) => state.list.todos,
@@ -42,4 +42,3 @@ function UserSelect(props: UserSelectProps) {
   )
 }
 
-export default UserSelect

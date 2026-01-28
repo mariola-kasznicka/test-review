@@ -1,9 +1,9 @@
 import React from "react"
-import styles from "./App.module.scss"
-import MainApp from "../MainApp/MainApp"
 import { useSelector } from "react-redux"
 import { Header } from "./Header"
 import { Footer } from "./Footer"
+import MainApp from "../feature/list/MainApp/MainApp"
+import styles from "./App.module.scss"
 
 export function App() {
   const todos = useSelector(

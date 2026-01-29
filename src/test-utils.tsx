@@ -31,7 +31,7 @@ export const renderWithRedux = (
     ...renderOptions
   }: CustomRenderOptions = {}
 ) => {
-  const Wrapper = ({ children }: { children: React.ReactNode }) => {
+  const Wrapper = ({ children }: { children?: React.ReactNode }) => {
     return <Provider store={store}>{children}</Provider>
   }
 

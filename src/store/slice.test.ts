@@ -1,5 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit"
-import listReducer, { addTodo, changeTodo, toggleTodo, removeTodo } from "./slice"
+import listReducer, {
+  addTodo,
+  changeTodo,
+  toggleTodo,
+  removeTodo,
+} from "./slice"
 import { Todo } from "./types"
 
 // Helper function to create a test store
@@ -281,7 +286,11 @@ describe("Todo Redux Integration Tests", () => {
       store.dispatch(addTodo(todo2))
 
       // Change todo1
-      const updatedTodo1: Todo = { id: 1, title: "Updated Todo 1", isDone: false }
+      const updatedTodo1: Todo = {
+        id: 1,
+        title: "Updated Todo 1",
+        isDone: false,
+      }
       store.dispatch(changeTodo(updatedTodo1))
 
       // Toggle todo2

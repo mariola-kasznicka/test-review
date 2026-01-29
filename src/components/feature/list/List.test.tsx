@@ -15,9 +15,7 @@ jest.mock("./EmptyList", () => ({
 
 jest.mock("./ListContent", () => ({
   ListContent: ({ todos }: { todos: Todo[] }) => (
-    <div data-testid="list-content">
-      ListContent with {todos.length} todos
-    </div>
+    <div data-testid="list-content">ListContent with {todos.length} todos</div>
   ),
 }))
 

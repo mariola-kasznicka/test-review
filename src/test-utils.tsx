@@ -29,7 +29,7 @@ export const renderWithRedux = (
     preloadedState,
     store = createTestStore(preloadedState),
     ...renderOptions
-  }: CustomRenderOptions = {}
+  }: CustomRenderOptions = {},
 ) => {
   const Wrapper = ({ children }: { children?: React.ReactNode }) => {
     return <Provider store={store}>{children}</Provider>

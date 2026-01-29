@@ -46,7 +46,7 @@ describe("UserSelect Component", () => {
 
     await waitFor(() => {
       expect(global.fetch).toHaveBeenCalledWith(
-        "https://jsonplaceholder.typicode.com/users/"
+        "https://jsonplaceholder.typicode.com/users/",
       )
     })
 

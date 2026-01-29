@@ -8,7 +8,7 @@ describe("EmptyList Component", () => {
     render(<EmptyList />)
     expect(screen.getByText("Sorry, the list is empty")).toBeInTheDocument()
   })
-  
+
   it("should render message in paragraph element", () => {
     render(<EmptyList />)
     const message = screen.getByText("Sorry, the list is empty")

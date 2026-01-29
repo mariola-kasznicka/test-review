@@ -29,6 +29,7 @@
     "build": "react-scripts build",
     "demo": "yarn build && serve -s build",
     "test": "react-scripts test",
+    "typecheck": "tsc --noEmit",
     "eject": "react-scripts eject",
     "format": "prettier --write ."
   },

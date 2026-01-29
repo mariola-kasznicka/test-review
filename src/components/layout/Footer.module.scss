@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  margin-top: auto;
+  padding: 50px;
+}
+
+.link {
+  color: black;
+  font-size: unset;
+
+  &:visited {
+    color: gray;
+    opacity: 0.5;
+  }
+}

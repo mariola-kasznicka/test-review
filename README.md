@@ -1,8 +1,10 @@
 # run with ` yarn run demo`
 
-***
-***
-***
+---
+
+---
+
+---
 
 # Getting Started with Create React App
 

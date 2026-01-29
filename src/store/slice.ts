@@ -13,13 +13,16 @@ const todoSlice = createSlice({
       state.todos.push(action.payload)
     },
     removeTodo(state, action: PayloadAction<number>) {
-      state.todos = state.todos.filter((_, idx) => idx !== action.payload)
+      state.todos = state.todos.filter((item) => item.id !== action.payload)
     },
-    changeTodos(state, action: PayloadAction<Todo[]>) {
-      state.todos = action.payload
+    changeTodo(state, action: PayloadAction<Todo>) {
+      const todoIndex = state.todos.findIndex((item) => item.id === action.payload.id)
+      if (todoIndex !== -1) {
+        state.todos[todoIndex] = action.payload
+      }
     },
     toggleTodo(state, action: PayloadAction<number>) {
-      const todo = state.todos[action.payload]
+      const todo = state.todos.find((item) => item.id === action.payload)
       if (todo) {
         todo.isDone = !todo.isDone
       }
@@ -27,7 +30,7 @@ const todoSlice = createSlice({
   },
 })
 
-export const { addTodo, removeTodo, changeTodos, toggleTodo } =
+export const { addTodo, removeTodo, changeTodo, toggleTodo } =
   todoSlice.actions
 
 export default todoSlice.reducer

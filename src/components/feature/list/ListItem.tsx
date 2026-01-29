@@ -1,8 +1,7 @@
 import { Form } from "react-bootstrap"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { Todo } from "../../../store/types"
-import { changeTodos } from "../../../store/slice"
-import { RootState } from "../../../store/store"
+import { toggleTodo } from "../../../store/slice"
 import { UserSelect } from "./UserSelect"
 import styles from "./ListItem.module.scss"
 
@@ -13,13 +12,9 @@ type ListItemProps = {
 export function ListItem(props: ListItemProps) {
   const { todo } = props
   const dispatch = useDispatch()
-  const todos = useSelector((state: RootState) => state.list.todos)
 
-  const handleToggle = () => {
-    const updatedTodos = todos.map((t) =>
-      t.id === todo.id ? { ...t, isDone: !t.isDone } : t,
-    )
-    dispatch(changeTodos(updatedTodos))
+  const handleToggle = (todo: Todo) => {
+    dispatch(toggleTodo(todo.id))
   }
 
   return (
@@ -28,7 +23,7 @@ export function ListItem(props: ListItemProps) {
       <Form.Check
         type="checkbox"
         checked={todo.isDone}
-        onChange={handleToggle}
+        onChange={() => handleToggle(todo)}
         label={todo.title}
       />
     </div>

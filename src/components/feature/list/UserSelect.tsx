@@ -1,9 +1,8 @@
 import React from "react"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { Form } from "react-bootstrap"
 import { Todo } from "../../../store/types"
-import { changeTodos } from "../../../store/slice"
-import { RootState } from "../../../store/store"
+import { changeTodo } from "../../../store/slice"
 import styles from "./UserSelect.module.scss"
 
 type UserSelectProps = {
@@ -17,7 +16,6 @@ export function UserSelect(props: UserSelectProps) {
   const { todo } = props
 
   const dispatch = useDispatch()
-  const todos = useSelector((state: RootState) => state.list.todos)
 
   React.useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users/")
@@ -27,10 +25,8 @@ export function UserSelect(props: UserSelectProps) {
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const userId = e.target.value ? Number(e.target.value) : undefined
-    const updatedTodos = todos.map((t) =>
-      t.id === todo.id ? { ...t, user: userId } : t,
-    )
-    dispatch(changeTodos(updatedTodos))
+    const updatedTodo: Todo = { ...todo, user: userId }
+    dispatch(changeTodo(updatedTodo))
   }
 
   return (
